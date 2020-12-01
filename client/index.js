@@ -28,12 +28,12 @@ const app = new Vue({
         } else if (dataSet === 'sub') {
           this.checked
             ? (this.words = [
+                ...data.data.filter((i) => i.includes(this.value)),
+              ])
+            : (this.words = [
                 ...data.data.filter((i) =>
                   i.toUpperCase().includes(this.value.toUpperCase())
                 ),
-              ])
-            : (this.words = [
-                ...data.data.filter((i) => i.includes(this.value)),
               ]);
           this.value = '';
           this.checked = false;
