@@ -1,0 +1,24 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  .block {
+    flex-basis: 70%;
+  }
+  .list {
+    display: flex;
+    justify-content: center;
+  }
+  h1 {
+    text-align: center;
+  }
+  .checkbox {
+    input,
+    label {
+      position: unset;
+    }
+  }
+}
