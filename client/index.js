@@ -19,8 +19,10 @@ const app = new Vue({
       const dataSet = e.target.dataset.id;
       try {
         this.loading = true;
-        const res = await fetch('http://localhost:3000/');
+        const res = await fetch('https://tss-test-server-app.herokuapp.com/');
+        console.log(res);
         const data = await res.json();
+        console.log(data);
         this.loading = false;
         if (dataSet === 'len' && !isNaN(+this.value)) {
           this.words = [...data.data.filter((i) => i.length > +this.value)];
